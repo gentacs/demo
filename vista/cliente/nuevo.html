@@ -1,0 +1,31 @@
+<div class="navbar-btn">
+	<a href="#/" class="btn btn-primary">Lista Clientes</a>
+</div>
+<section ng-controller="NuevoController" class="nuevoCliente">
+	<form name="form" novalidate>
+		<h2>Nuevo Cliente</h2>
+		<ul>
+			<li>
+				<label>Nombre:</label> 
+				<input type="text" ng-model="cliente.nombre" class="input-sm" required /> (*)
+			</li>
+			<li>
+				<label>Apellido Paterno:</label> 
+				<input type="text" ng-model="cliente.apellidoPaterno" class="input-sm" required /> (*)
+			</li>
+			<li>
+				<label>Apellido Materno:</label> 
+				<input type="text" ng-model="cliente.apellidoMaterno" class="input-sm" />
+			</li>
+			<li>
+				<label>Fono:</label> 
+				<input type="tel" ng-model="cliente.telefono" class="input-sm" />
+			</li>
+			<li>
+				<button ng-click="guardar()" ng-disabled="form.$invalid" class="btn btn-success">Guardar</button>
+				<a href="" class="btn btn-default" ng-click="reset()">Limpiar</a>
+			</li>
+		</ul>
+	</form>
+
+</section>

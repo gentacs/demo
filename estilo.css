@@ -1,0 +1,75 @@
+body{
+	background-color: #eee;
+}
+h2{
+	border-bottom: solid 1px #999;
+}
+header>h1{
+	background-color: #000;
+	color: #eee;
+	margin: 0px;
+}
+.navbar-btn{
+	margin-left: 10px;
+}
+section.detalle{
+	border-radius: 10px; 
+	box-shadow: 2px 2px 2px 2px #555;
+	margin: 10px auto;
+	padding: 10px;
+	width: 700px;
+}
+section>h2{
+	margin: 0px;
+}
+section.nuevoCliente{
+	box-shadow: 0 0 2px 0 #555;
+	margin: 10px auto;
+	padding: 10px;
+	width: 700px;
+}
+section.nuevoCliente ul{
+	list-style-type: none;
+	padding: 0;
+}
+section.nuevoCliente ul label{
+	width: 200px;
+}
+section.nuevoCliente ul li{
+	margin: 10px;
+}
+section.nuevoCliente ul li button{
+	margin: 0 0 0 200px;
+}
+section.nuevoCliente ul li input{
+	width: 300px;
+}
+table.lista-clientes{
+	margin: 0 auto;
+}
+table.lista-clientes>caption{
+	margin: 10px;
+}
+table.lista-clientes tbody>tr:hover{
+	background-color: #fea;
+	border-radius: 5px;
+	box-shadow: 0 0 4px 0px #555;
+}
+table.lista-clientes tbody>tr>td{
+	padding: 10px 10px;
+}
+table.lista-clientes thead>tr{
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px 0px #333;
+}
+table.lista-clientes thead>tr>th{
+	background-color: #fff;
+	border-right: 1px solid #999;
+	font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 200px;
+}
+table.lista-clientes thead>tr>th:last-child{
+	border-right: 0px;
+}

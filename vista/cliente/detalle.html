@@ -1,0 +1,26 @@
+<div class="navbar-btn">
+	<a href="#/" class="btn btn-primary">Lista Cliente</a>
+	<a href="" class="btn btn-primary" ng-click="cargarFormulario()">Nueva Tarea</a>
+</div>
+<section class="detalle" ng-controller="DetalleController">
+	<h2>{{ cliente.nombre }} {{ cliente.apellidoPaterno }}</h2>
+	<label>Tel&eacute;fono:</label> {{ cliente.telefono }}
+	
+	<table>
+		<caption>
+			<h3>Trabajos</h3>
+		</caption>
+		<thead>
+			<tr>
+				<th>Fecha</th>
+				<th>Descripci&oacute;n</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="trabajo in cliente.trabajos">
+				<td>{{ trabajo.fecha }}</td>
+				<td>{{ trabajo.strdescripcion }}</td>
+			</tr>
+		</tbody>
+	</table>
+</section>

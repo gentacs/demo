@@ -1,0 +1,26 @@
+<div ng-controller="ListaController">
+	<div class="navbar-btn">
+		<a href="#/nuevo/cliente" class="btn btn-primary">Nuevo Cliente</a><br />
+	</div>
+
+	<table class="lista-clientes">
+		<caption>
+			<label>Filtro:</label>
+			<input type="text" ng-model="nombre" class="input-lg"/>
+		</caption>
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido Paterno</th>
+				<th>Apellido Materno</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="cliente in clientes | orderBy:'nombre':false | filter:nombre" ng-click="cambiarPath( cliente.id )">
+				<td>{{ cliente.nombre }}</td>
+				<td>{{ cliente.apellido_paterno }}</td>
+				<td>{{ cliente.apellido_materno }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
