@@ -1,0 +1,41 @@
+<?php
+class BD{
+	protected $nombrebd;
+	protected $usuario;
+	protected $clave;
+	protected $host;
+	protected $conexion;
+
+	function __construct(){
+		$this->nombrebd	= "";
+		$this->usuario 	= "";
+		$this->clave 	= "";
+		$this->host 	= "";
+	}
+	public function abrir(){
+		$this->conexion = new PDO("mysql:host=".$this->host.";dbname=".$this->nombrebd, $this->usuario, $this->clave);
+	}
+
+	public function cerrar(){
+		$this->conexion = null;
+	}
+
+	public function insert($sql){
+		$this->abrir();
+		$this->conexion->query($sql);
+		$this->cerrar();
+		return $this->conexion->lastInsertId();
+	}
+
+	public function select($sql){
+		$retornar = array();
+		$this->abrir();
+		$r = pg_query($this->conexion, $sql);
+		$this->cerrar();
+		while($d = pg_fetch_object($r)){
+			$retornar[] = $d;
+		}
+		return $retornar;
+	}
+}
+?>
